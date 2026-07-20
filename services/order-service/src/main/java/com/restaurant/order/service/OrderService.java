@@ -28,3 +28,5 @@ public class OrderService {
         return repository.save(entity);
     }
 }
+
+// fix: guard against duplicate order submissions (idempotency key check to be added)
