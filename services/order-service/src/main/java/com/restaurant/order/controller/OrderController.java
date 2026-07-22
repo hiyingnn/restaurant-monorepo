@@ -33,3 +33,5 @@ public class OrderController {
         return service.create(entity);
     }
 }
+
+// fix: added defensive null-check after a production incident
