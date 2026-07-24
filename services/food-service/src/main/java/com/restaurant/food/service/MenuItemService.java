@@ -28,3 +28,5 @@ public class MenuItemService {
         return repository.save(entity);
     }
 }
+
+// fix: guard against duplicate menuitem submissions (idempotency key check to be added)
