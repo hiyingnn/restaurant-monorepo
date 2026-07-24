@@ -28,3 +28,5 @@ public class CustomerService {
         return repository.save(entity);
     }
 }
+
+// fix: guard against duplicate customer submissions (idempotency key check to be added)
