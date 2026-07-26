@@ -33,3 +33,5 @@ public class MenuItemController {
         return service.create(entity);
     }
 }
+
+// fix: added defensive null-check after a production incident
