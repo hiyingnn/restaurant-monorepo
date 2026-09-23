@@ -1,0 +1,193 @@
+--- INITIALIZING NEW MONOREPO ---
+Initialized empty Git repository in /root/workspace/restaurant-monorepo/.git/
+[main (root-commit) e17a261] chore: initialize restaurant-monorepo
+To /root/workspace/remotes/restaurant-monorepo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+===========================================================
+Starting merge for: order-service
+-----------------------------------------------------------
+1. Cloning and filtering history...
+Cloning into bare repository 'order-service-temp'...
+NOTICE: Removing 'origin' remote; see 'Why is my origin removed?'
+        in the manual if you want to push back there.
+        (was https://github.com/hiyingnn/order-service.git)
+Note: A branch outside the refs/remotes/ hierarchy was not removed;
+to delete it, use:
+  git branch -d main
+Parsed 11 commits
+New history written in 0.02 seconds; now repacking/cleaning...
+Repacking your repo and cleaning out old unneeded objects
+Completely finished after 0.05 seconds.
+2. Fetching filtered history...
+From /root/workspace/order-service-temp
+ * [new branch]      main       -> order-service-temp/main
+   -> Merging order-service/main...
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+Merge made by the 'ort' strategy.
+ services/order-service/.gitignore                  |  6 ++
+ services/order-service/README.md                   | 21 ++++++
+ services/order-service/pom.xml                     | 78 ++++++++++++++++++++++
+ .../restaurant/order/OrderServiceApplication.java  | 12 ++++
+ .../com/restaurant/order/config/OpenApiConfig.java | 15 +++++
+ .../order/controller/OrderController.java          | 37 ++++++++++
+ .../controller/ValidationExceptionHandler.java     | 16 +++++
+ .../java/com/restaurant/order/model/Order.java     | 40 +++++++++++
+ .../order/repository/OrderRepository.java          |  7 ++
+ .../order/service/OrderNotFoundException.java      | 12 ++++
+ .../com/restaurant/order/service/OrderService.java | 32 +++++++++
+ .../src/main/resources/application-demo.yml        |  4 ++
+ .../src/main/resources/application-staging.yml     |  3 +
+ .../src/main/resources/application.yml             | 14 ++++
+ .../order/OrderServiceApplicationTests.java        | 12 ++++
+ 15 files changed, 309 insertions(+)
+ create mode 100644 services/order-service/.gitignore
+ create mode 100644 services/order-service/README.md
+ create mode 100644 services/order-service/pom.xml
+ create mode 100644 services/order-service/src/main/java/com/restaurant/order/OrderServiceApplication.java
+ create mode 100644 services/order-service/src/main/java/com/restaurant/order/config/OpenApiConfig.java
+ create mode 100644 services/order-service/src/main/java/com/restaurant/order/controller/OrderController.java
+ create mode 100644 services/order-service/src/main/java/com/restaurant/order/controller/ValidationExceptionHandler.java
+ create mode 100644 services/order-service/src/main/java/com/restaurant/order/model/Order.java
+ create mode 100644 services/order-service/src/main/java/com/restaurant/order/repository/OrderRepository.java
+ create mode 100644 services/order-service/src/main/java/com/restaurant/order/service/OrderNotFoundException.java
+ create mode 100644 services/order-service/src/main/java/com/restaurant/order/service/OrderService.java
+ create mode 100644 services/order-service/src/main/resources/application-demo.yml
+ create mode 100644 services/order-service/src/main/resources/application-staging.yml
+ create mode 100644 services/order-service/src/main/resources/application.yml
+ create mode 100644 services/order-service/src/test/java/com/restaurant/order/OrderServiceApplicationTests.java
+To /root/workspace/remotes/restaurant-monorepo.git
+   e17a261..69c2859  main -> main
+branch 'main' set up to track 'origin/main'.
+4. Cleaning up temporary remote and directory...
+-----------------------------------------------------------
+order-service merge complete.
+===========================================================
+===========================================================
+Starting merge for: customer-service
+-----------------------------------------------------------
+1. Cloning and filtering history...
+Cloning into bare repository 'customer-service-temp'...
+NOTICE: Removing 'origin' remote; see 'Why is my origin removed?'
+        in the manual if you want to push back there.
+        (was https://github.com/hiyingnn/customer-service.git)
+Note: A branch outside the refs/remotes/ hierarchy was not removed;
+to delete it, use:
+  git branch -d main
+Parsed 12 commits
+New history written in 0.02 seconds; now repacking/cleaning...
+Repacking your repo and cleaning out old unneeded objects
+Completely finished after 0.06 seconds.
+2. Fetching filtered history...
+From /root/workspace/customer-service-temp
+ * [new branch]      main       -> customer-service-temp/main
+   -> Merging customer-service/main...
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+Merge made by the 'ort' strategy.
+ services/customer-service/.gitignore               |   6 ++
+ services/customer-service/README.md                |  22 ++++
+ services/customer-service/pom.xml                  | 113 +++++++++++++++++++++
+ .../customer/CustomerServiceApplication.java       |  12 +++
+ .../customer/controller/CustomerController.java    |  37 +++++++
+ .../controller/ValidationExceptionHandler.java     |  16 +++
+ .../com/restaurant/customer/dto/CustomerDto.java   |   4 +
+ .../restaurant/customer/mapper/CustomerMapper.java |  10 ++
+ .../com/restaurant/customer/model/Customer.java    |  30 ++++++
+ .../customer/repository/CustomerRepository.java    |   7 ++
+ .../service/CustomerNotFoundException.java         |  12 +++
+ .../customer/service/CustomerService.java          |  32 ++++++
+ .../src/main/resources/application-demo.yml        |   4 +
+ .../src/main/resources/application-staging.yml     |   3 +
+ .../src/main/resources/application.yml             |  14 +++
+ .../customer/CustomerServiceApplicationTests.java  |  12 +++
+ .../customer/CustomerServiceRepositoryIT.java      |  18 ++++
+ 17 files changed, 352 insertions(+)
+ create mode 100644 services/customer-service/.gitignore
+ create mode 100644 services/customer-service/README.md
+ create mode 100644 services/customer-service/pom.xml
+ create mode 100644 services/customer-service/src/main/java/com/restaurant/customer/CustomerServiceApplication.java
+ create mode 100644 services/customer-service/src/main/java/com/restaurant/customer/controller/CustomerController.java
+ create mode 100644 services/customer-service/src/main/java/com/restaurant/customer/controller/ValidationExceptionHandler.java
+ create mode 100644 services/customer-service/src/main/java/com/restaurant/customer/dto/CustomerDto.java
+ create mode 100644 services/customer-service/src/main/java/com/restaurant/customer/mapper/CustomerMapper.java
+ create mode 100644 services/customer-service/src/main/java/com/restaurant/customer/model/Customer.java
+ create mode 100644 services/customer-service/src/main/java/com/restaurant/customer/repository/CustomerRepository.java
+ create mode 100644 services/customer-service/src/main/java/com/restaurant/customer/service/CustomerNotFoundException.java
+ create mode 100644 services/customer-service/src/main/java/com/restaurant/customer/service/CustomerService.java
+ create mode 100644 services/customer-service/src/main/resources/application-demo.yml
+ create mode 100644 services/customer-service/src/main/resources/application-staging.yml
+ create mode 100644 services/customer-service/src/main/resources/application.yml
+ create mode 100644 services/customer-service/src/test/java/com/restaurant/customer/CustomerServiceApplicationTests.java
+ create mode 100644 services/customer-service/src/test/java/com/restaurant/customer/CustomerServiceRepositoryIT.java
+To /root/workspace/remotes/restaurant-monorepo.git
+   69c2859..bd8bffb  main -> main
+branch 'main' set up to track 'origin/main'.
+4. Cleaning up temporary remote and directory...
+-----------------------------------------------------------
+customer-service merge complete.
+===========================================================
+===========================================================
+Starting merge for: food-service
+-----------------------------------------------------------
+1. Cloning and filtering history...
+Cloning into bare repository 'food-service-temp'...
+NOTICE: Removing 'origin' remote; see 'Why is my origin removed?'
+        in the manual if you want to push back there.
+        (was https://github.com/hiyingnn/food-service.git)
+Note: A branch outside the refs/remotes/ hierarchy was not removed;
+to delete it, use:
+  git branch -d main
+Parsed 12 commits
+New history written in 0.02 seconds; now repacking/cleaning...
+Repacking your repo and cleaning out old unneeded objects
+Completely finished after 0.06 seconds.
+2. Fetching filtered history...
+From /root/workspace/food-service-temp
+ * [new branch]      main       -> food-service-temp/main
+   -> Merging food-service/main...
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+Merge made by the 'ort' strategy.
+ services/food-service/.gitignore                   |  6 ++
+ services/food-service/README.md                    | 21 +++++
+ services/food-service/pom.xml                      | 94 ++++++++++++++++++++++
+ .../restaurant/food/FoodServiceApplication.java    | 12 +++
+ .../com/restaurant/food/config/OpenApiConfig.java  | 15 ++++
+ .../food/controller/MenuItemController.java        | 37 +++++++++
+ .../java/com/restaurant/food/dto/MenuItemDto.java  |  6 ++
+ .../com/restaurant/food/mapper/MenuItemMapper.java | 10 +++
+ .../java/com/restaurant/food/model/MenuItem.java   | 30 +++++++
+ .../food/repository/MenuItemRepository.java        |  7 ++
+ .../food/service/MenuItemNotFoundException.java    | 12 +++
+ .../restaurant/food/service/MenuItemService.java   | 32 ++++++++
+ .../src/main/resources/application-demo.yml        |  4 +
+ .../src/main/resources/application-staging.yml     |  3 +
+ .../src/main/resources/application.yml             | 15 ++++
+ .../food/FoodServiceApplicationTests.java          | 12 +++
+ 16 files changed, 316 insertions(+)
+ create mode 100644 services/food-service/.gitignore
+ create mode 100644 services/food-service/README.md
+ create mode 100644 services/food-service/pom.xml
+ create mode 100644 services/food-service/src/main/java/com/restaurant/food/FoodServiceApplication.java
+ create mode 100644 services/food-service/src/main/java/com/restaurant/food/config/OpenApiConfig.java
+ create mode 100644 services/food-service/src/main/java/com/restaurant/food/controller/MenuItemController.java
+ create mode 100644 services/food-service/src/main/java/com/restaurant/food/dto/MenuItemDto.java
+ create mode 100644 services/food-service/src/main/java/com/restaurant/food/mapper/MenuItemMapper.java
+ create mode 100644 services/food-service/src/main/java/com/restaurant/food/model/MenuItem.java
+ create mode 100644 services/food-service/src/main/java/com/restaurant/food/repository/MenuItemRepository.java
+ create mode 100644 services/food-service/src/main/java/com/restaurant/food/service/MenuItemNotFoundException.java
+ create mode 100644 services/food-service/src/main/java/com/restaurant/food/service/MenuItemService.java
+ create mode 100644 services/food-service/src/main/resources/application-demo.yml
+ create mode 100644 services/food-service/src/main/resources/application-staging.yml
+ create mode 100644 services/food-service/src/main/resources/application.yml
+ create mode 100644 services/food-service/src/test/java/com/restaurant/food/FoodServiceApplicationTests.java
+To /root/workspace/remotes/restaurant-monorepo.git
+   bd8bffb..8eda618  main -> main
+branch 'main' set up to track 'origin/main'.
+4. Cleaning up temporary remote and directory...
+-----------------------------------------------------------
+food-service merge complete.
+===========================================================
+--- ALL MERGES COMPLETE ---
