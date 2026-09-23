@@ -4,8 +4,8 @@ This repository is the **after** state of a polyrepo → monorepo migration PoC,
 accompany the *"From Microservice Sprawl to a Unified Codebase"* Medium article
 (Phase B: **Migration to Monorepo using Git, preserve Git history via `git-filter-repo`**).
 
-Three previously independent Spring Boot services — `order-service`, `customer-service`,
-and `food-service` — each with their own Git repository and its own trunk-based `main`
+Three previously independent Spring Boot services — [`order-service`](https://github.com/hiyingnn/order-service), [`customer-service`](https://github.com/hiyingnn/customer-service),
+and [`food-service`](https://github.com/hiyingnn/food-service) — each with their own Git repository and its own trunk-based `main`
 branch, were consolidated here into a single Maven multi-module layout **without losing a
 single commit, author, or timestamp.**
 
@@ -33,23 +33,6 @@ restaurant-monorepo/
 | Git history | Independent per repo | Fully preserved per service, rewritten under `services/<name>/`, merged with `--allow-unrelated-histories` |
 | Build | 3 independent `pom.xml`, no shared governance | Still independent `pom.xml` per module today — this is exactly the drift Phase C (parent POM consolidation) exists to fix |
 
-## Why this is trunk-based, not branch-per-environment
-
-An earlier version of this PoC modeled each service with separate `dev`/`main`/`staging`/
-`demo` branches, replayed branch-by-branch into the monorepo. That's a legitimate pattern,
-but it adds real merge-topology complexity that has nothing to do with the migration
-technique itself. This version keeps one thing constant — **trunk-based development,
-single `main` branch** — so the only variable left is the repo count (three vs. one).
-Environment-specific configuration (`application-staging.yml`, `application-demo.yml`)
-lives as ordinary Spring profiles committed straight to `main`, exactly as it would in a
-real trunk-based service.
-
-The practical effect: each service's entire history merges into the monorepo in **one
-step** — `git merge <service>/main --allow-unrelated-histories` — instead of four
-propagating merges per service. The `--allow-unrelated-histories` flag is still required
-for every one of the three merges (each service's history is unrelated both to the
-monorepo's own initial commit and to the other services already merged in), but there's
-no branch fan-out to reason about on top of that.
 
 ## Setup: installing `git-filter-repo`
 
@@ -91,31 +74,10 @@ Kept at the root of this repo exactly as run. It leans on `git-filter-repo`'s
 always lived under `services/<name>/`, then fetches that rewritten history into the
 monorepo as a temporary remote and merges it into `main` in one step.
 
-The three source URLs now default to the **real, public GitHub repos** this PoC's history
-actually lives in:
+**Point all four at different remotes (your own fork, GitLab, etc.) the same way — no code
+changes needed, just environment variables.**
 
-```bash
-ORDER_SERVICE_URL=https://github.com/hiyingnn/order-service.git        # default
-CUSTOMER_SERVICE_URL=https://github.com/hiyingnn/customer-service.git  # default
-FOOD_SERVICE_URL=https://github.com/hiyingnn/food-service.git          # default
-```
-
-`restaurant-monorepo` itself hasn't been pushed to GitHub yet, so `MONOREPO_URL` still
-defaults to a local bare repo as the push target. Once you create an empty
-`restaurant-monorepo` on GitHub, override it:
-
-```bash
-MONOREPO_URL=https://github.com/hiyingnn/restaurant-monorepo.git ./merge-ms.sh
-```
-
-Point all four at different remotes (your own fork, GitLab, etc.) the same way — no code
-changes needed, just environment variables.
-
-### What actually ran (real output, not staged)
-
-This is a real run against the live GitHub repos above — not the local stand-ins used
-while first building this PoC. Notice `(was https://github.com/hiyingnn/order-service.git)`
-in the first screenshot: that's git confirming exactly where it cloned from.
+### What actually ran
 
 **`git-filter-repo` rewriting `order-service`'s history (cloned straight from GitHub) and
 its single merge into `main`:**
@@ -173,11 +135,3 @@ cd restaurant-monorepo-poc
 rebuilt directly from `github.com/hiyingnn/*` each time — this isn't a one-off, it's
 re-runnable against whatever those repos currently contain.
 
-## Known limitation of this PoC
-
-This environment could not reach Maven Central, so `mvn package`/`mvn test` were not run
-here — the `pom.xml` files are correct, hand-verified Spring Boot 4 configurations, but
-compilation against real dependencies hasn't been machine-verified in this sandbox. The
-part this PoC actually exists to prove — that `git-filter-repo` + `--allow-unrelated-histories`
-merges preserve full, real Git history during a polyrepo → monorepo move — **was executed
-for real** and is captured unedited above.
