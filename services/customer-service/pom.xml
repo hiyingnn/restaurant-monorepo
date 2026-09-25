@@ -17,6 +17,7 @@
     <name>customer-service</name>
     <description>Customer domain microservice (formerly its own polyrepo)</description>
 
+    <!-- Testcontainers stays a local BOM import - unrelated to this migration. -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -29,10 +30,15 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- Baseline, pre-parent-POM: an independent project. Java and Spring Boot
+         already match the fleet baseline. MapStruct happens to agree with
+         food-service (1.6.3), by coincidence, not by any shared configuration.
+         Lombok and springdoc-openapi are pinned to this service's own real values. -->
     <properties>
         <java.version>21</java.version>
-        <lombok.version>1.18.34</lombok.version>
+        <lombok.version>1.18.32</lombok.version>
         <mapstruct.version>1.6.3</mapstruct.version>
+        <springdoc.version>2.7.0</springdoc.version>
     </properties>
 
     <dependencies>
@@ -67,6 +73,11 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${mapstruct.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${springdoc.version}</version>
         </dependency>
         <dependency>
             <groupId>org.testcontainers</groupId>
