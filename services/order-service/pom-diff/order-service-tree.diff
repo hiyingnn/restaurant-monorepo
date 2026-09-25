@@ -1,40 +1,13 @@
 diff --git a/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/order-service/tree-old.txt b/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/order-service/tree-new.txt
-index b8fcdc6..b8adb45 100644
+index 73d2d7c..1eb944b 100644
 --- a/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/order-service/tree-old.txt	
 +++ b/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/order-service/tree-new.txt	
-@@ -89,18 +89,19 @@
- [INFO]             org.hdrhistogram:HdrHistogram:jar:2.2.2:runtime
- [INFO]    com.h2database:h2:jar:2.4.240:runtime
- [INFO]    org.projectlombok:lombok:jar:1.18.30:compile (optional)
--[INFO]    org.springdoc:springdoc-openapi-starter-webmvc-ui:jar:2.6.0:compile
--[INFO]       org.springdoc:springdoc-openapi-starter-webmvc-api:jar:2.6.0:compile
--[INFO]          org.springdoc:springdoc-openapi-starter-common:jar:2.6.0:compile
--[INFO]             io.swagger.core.v3:swagger-core-jakarta:jar:2.2.22:compile
-+[INFO]    org.springdoc:springdoc-openapi-starter-webmvc-ui:jar:2.7.0:compile
-+[INFO]       org.springdoc:springdoc-openapi-starter-webmvc-api:jar:2.7.0:compile
-+[INFO]          org.springdoc:springdoc-openapi-starter-common:jar:2.7.0:compile
-+[INFO]             io.swagger.core.v3:swagger-core-jakarta:jar:2.2.25:compile
- [INFO]                org.apache.commons:commons-lang3:jar:3.20.0:compile
--[INFO]                io.swagger.core.v3:swagger-annotations-jakarta:jar:2.2.22:compile
--[INFO]                io.swagger.core.v3:swagger-models-jakarta:jar:2.2.22:compile
-+[INFO]                io.swagger.core.v3:swagger-annotations-jakarta:jar:2.2.25:compile
-+[INFO]                io.swagger.core.v3:swagger-models-jakarta:jar:2.2.25:compile
- [INFO]                com.fasterxml.jackson.core:jackson-databind:jar:2.21.5:compile
- [INFO]                   com.fasterxml.jackson.core:jackson-core:jar:2.21.5:compile
- [INFO]                com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.21.5:compile
- [INFO]                com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.5:compile
--[INFO]       org.webjars:swagger-ui:jar:5.17.14:compile
-+[INFO]       org.webjars:swagger-ui:jar:5.18.2:compile
-+[INFO]       org.webjars:webjars-locator-lite:jar:1.1.4:compile
- [INFO]    org.springframework.boot:spring-boot-starter-test:jar:4.1.1:test
- [INFO]       org.springframework.boot:spring-boot-test:jar:4.1.1:test
- [INFO]       org.springframework.boot:spring-boot-test-autoconfigure:jar:4.1.1:test
-@@ -136,6 +137,6 @@
+@@ -136,6 +136,6 @@
  [INFO] ------------------------------------------------------------------------
  [INFO] BUILD SUCCESS
  [INFO] ------------------------------------------------------------------------
--[INFO] Total time:  2.852 s
--[INFO] Finished at: 2026-09-25T14:00:39+08:00
-+[INFO] Total time:  3.097 s
-+[INFO] Finished at: 2026-09-25T14:00:44+08:00
+-[INFO] Total time:  4.103 s
+-[INFO] Finished at: 2026-09-25T14:19:51+08:00
++[INFO] Total time:  3.694 s
++[INFO] Finished at: 2026-09-25T14:19:57+08:00
  [INFO] ------------------------------------------------------------------------

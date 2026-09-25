@@ -227,7 +227,7 @@
     <spring-security.version>7.1.1</spring-security.version>
     <spring-session.version>4.1.1</spring-session.version>
     <spring-ws.version>5.0.2</spring-ws.version>
-    <springdoc.version>2.7.0</springdoc.version>
+    <springdoc.version>2.6.0</springdoc.version>
     <sqlite-jdbc.version>3.53.2.1</sqlite-jdbc.version>
     <testcontainers-redis-module.version>2.2.4</testcontainers-redis-module.version>
     <testcontainers.version>2.0.5</testcontainers.version>
@@ -9946,7 +9946,7 @@
     <dependency>
       <groupId>org.springdoc</groupId>
       <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-      <version>2.7.0</version>
+      <version>2.6.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

@@ -20,6 +20,7 @@
          as an independent project. -->
     <properties>
         <lombok.version>1.18.30</lombok.version>
+        <springdoc.version>2.6.0</springdoc.version>
     </properties>
 
     <dependencies>
