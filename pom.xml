@@ -4,24 +4,28 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.1</version>
+        <relativePath/>
+    </parent>
+
     <groupId>com.restaurant</groupId>
-    <artifactId>restaurant-monorepo-audit</artifactId>
+    <artifactId>restaurant-monorepo-parent</artifactId>
     <version>0.1.0</version>
     <packaging>pom</packaging>
-    <name>restaurant-monorepo-audit</name>
-    <description>
-        Bare reactor aggregator, nothing more - lists the three services as modules
-        so dependency-audit tooling (dependency_detection.sh, pom_diff.sh) can run
-        once from the root instead of once per service. Deliberately NOT a parent:
-        no service declares this as its &lt;parent&gt;, and it holds no shared
-        properties. Aggregation and parent-inheritance are separate Maven
-        mechanisms - this file only uses the first one. Step 2 is what introduces
-        an actual parent.
-    </description>
+    <name>restaurant-monorepo-parent</name>
 
     <modules>
         <module>services/order-service</module>
         <module>services/customer-service</module>
         <module>services/food-service</module>
     </modules>
+
+    <properties>
+        <java.version>21</java.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
+        <springdoc.version>2.7.0</springdoc.version>
+    </properties>
 </project>

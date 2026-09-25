@@ -5,26 +5,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.1.1</version>
-        <relativePath/>
+        <groupId>com.restaurant</groupId>
+        <artifactId>restaurant-monorepo-parent</artifactId>
+        <version>0.1.0</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.restaurant</groupId>
     <artifactId>order-service</artifactId>
-    <version>0.1.0</version>
     <name>order-service</name>
     <description>Order domain microservice (formerly its own polyrepo)</description>
 
-    <!-- Baseline, pre-parent-POM: an independent project, no relation to the other
-         two services. Java and Spring Boot already match the fleet baseline; Lombok
-         and springdoc-openapi are pinned to this service's own real values, and
-         MapStruct isn't used here at all. -->
+    <!-- java.version and springdoc.version are now inherited from the parent.
+         Lombok stays declared locally, unchanged: still 1.18.30, exactly as it was
+         as an independent project. -->
     <properties>
-        <java.version>21</java.version>
         <lombok.version>1.18.30</lombok.version>
-        <springdoc.version>2.6.0</springdoc.version>
     </properties>
 
     <dependencies>

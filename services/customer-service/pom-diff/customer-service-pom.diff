@@ -1,0 +1,36 @@
+diff --git a/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/customer-service/effective-old.xml b/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/customer-service/effective-new.xml
+index 46bc056..a6e01ec 100644
+--- a/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/customer-service/effective-old.xml	
++++ b/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/customer-service/effective-new.xml	
+@@ -13,17 +13,17 @@
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+-    <groupId>org.springframework.boot</groupId>
+-    <artifactId>spring-boot-starter-parent</artifactId>
+-    <version>4.1.1</version>
+-    <relativePath />
++    <groupId>com.restaurant</groupId>
++    <artifactId>restaurant-monorepo-parent</artifactId>
++    <version>0.1.0</version>
++    <relativePath>../../pom.xml</relativePath>
+   </parent>
+   <groupId>com.restaurant</groupId>
+   <artifactId>customer-service</artifactId>
+   <version>0.1.0</version>
+   <name>customer-service</name>
+   <description>Customer domain microservice (formerly its own polyrepo)</description>
+-  <url>https://spring.io/projects/spring-boot/customer-service</url>
++  <url>https://spring.io/projects/spring-boot/restaurant-monorepo-parent/services/customer-service</url>
+   <licenses>
+     <license>
+       <name>Apache License, Version 2.0</name>
+@@ -39,7 +39,7 @@
+     </developer>
+   </developers>
+   <scm>
+-    <url>https://github.com/spring-projects/spring-boot/customer-service</url>
++    <url>https://github.com/spring-projects/spring-boot/restaurant-monorepo-parent/services/customer-service</url>
+   </scm>
+   <issueManagement />
+   <properties>

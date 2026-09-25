@@ -1,0 +1,36 @@
+diff --git a/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/food-service/effective-old.xml b/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/food-service/effective-new.xml
+index cbfea49..d17eed8 100644
+--- a/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/food-service/effective-old.xml	
++++ b/C:/Users/Ren Ying/OneDrive/Desktop/projects/medium-article/repos-poc/restaurant-monorepo-build/restaurant-monorepo/services/food-service/effective-new.xml	
+@@ -13,17 +13,17 @@
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+-    <groupId>org.springframework.boot</groupId>
+-    <artifactId>spring-boot-starter-parent</artifactId>
+-    <version>4.1.1</version>
+-    <relativePath />
++    <groupId>com.restaurant</groupId>
++    <artifactId>restaurant-monorepo-parent</artifactId>
++    <version>0.1.0</version>
++    <relativePath>../../pom.xml</relativePath>
+   </parent>
+   <groupId>com.restaurant</groupId>
+   <artifactId>food-service</artifactId>
+   <version>0.1.0</version>
+   <name>food-service</name>
+   <description>MenuItem domain microservice (formerly its own polyrepo)</description>
+-  <url>https://spring.io/projects/spring-boot/food-service</url>
++  <url>https://spring.io/projects/spring-boot/restaurant-monorepo-parent/services/food-service</url>
+   <licenses>
+     <license>
+       <name>Apache License, Version 2.0</name>
+@@ -39,7 +39,7 @@
+     </developer>
+   </developers>
+   <scm>
+-    <url>https://github.com/spring-projects/spring-boot/food-service</url>
++    <url>https://github.com/spring-projects/spring-boot/restaurant-monorepo-parent/services/food-service</url>
+   </scm>
+   <issueManagement />
+   <properties>
