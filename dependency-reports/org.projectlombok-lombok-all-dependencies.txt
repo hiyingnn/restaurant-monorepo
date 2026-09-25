@@ -1,0 +1,6 @@
+com.restaurant:order-service:jar:0.1.0
+\- org.projectlombok:lombok:jar:1.18.30:compile (optional)
+com.restaurant:customer-service:jar:0.1.0
+\- org.projectlombok:lombok:jar:1.18.32:compile (optional)
+com.restaurant:food-service:jar:0.1.0
+\- org.projectlombok:lombok:jar:1.18.34:compile (optional)

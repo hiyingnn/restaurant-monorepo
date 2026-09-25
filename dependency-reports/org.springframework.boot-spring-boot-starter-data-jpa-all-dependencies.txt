@@ -1,0 +1,6 @@
+com.restaurant:order-service:jar:0.1.0
+\- org.springframework.boot:spring-boot-starter-data-jpa:jar:4.1.1:compile
+com.restaurant:customer-service:jar:0.1.0
+\- org.springframework.boot:spring-boot-starter-data-jpa:jar:4.1.1:compile
+com.restaurant:food-service:jar:0.1.0
+\- org.springframework.boot:spring-boot-starter-data-jpa:jar:4.1.1:compile

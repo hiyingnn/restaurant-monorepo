@@ -1,0 +1,2 @@
+com.restaurant:customer-service:jar:0.1.0
+\- org.testcontainers:postgresql:jar:1.20.4:test

@@ -1,0 +1,4 @@
+com.restaurant:customer-service:jar:0.1.0
+\- org.mapstruct:mapstruct:jar:1.6.3:compile
+com.restaurant:food-service:jar:0.1.0
+\- org.mapstruct:mapstruct:jar:1.6.3:compile

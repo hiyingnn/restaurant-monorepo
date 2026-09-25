@@ -1,0 +1,6 @@
+com.restaurant:order-service:jar:0.1.0
+\- org.springframework.boot:spring-boot-starter-test:jar:4.1.1:test
+com.restaurant:customer-service:jar:0.1.0
+\- org.springframework.boot:spring-boot-starter-test:jar:4.1.1:test
+com.restaurant:food-service:jar:0.1.0
+\- org.springframework.boot:spring-boot-starter-test:jar:4.1.1:test

@@ -1,0 +1,6 @@
+com.restaurant:order-service:jar:0.1.0
+\- com.h2database:h2:jar:2.4.240:runtime
+com.restaurant:customer-service:jar:0.1.0
+\- com.h2database:h2:jar:2.4.240:runtime
+com.restaurant:food-service:jar:0.1.0
+\- com.h2database:h2:jar:2.4.240:runtime
